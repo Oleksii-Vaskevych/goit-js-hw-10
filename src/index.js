@@ -55,7 +55,7 @@ function createMarkupCountryList(countries) {
   const markupList = countries
     .map(
       ({ name, flags }) =>
-        /*html*/ `<li class="country-list__item"><img class="country-list__gallery" src="${flags.svg}" alt="flag" width="30">${name.official}</li>`
+        /*html*/ `<li class="country-list__item"><img class="country-list__gallery" src="${flags.svg}" alt="flag" width="30"> ${name.official}</li>`
     )
     .join('');
   refs.countryList.insertAdjacentHTML('beforeend', markupList);
@@ -71,7 +71,7 @@ function createMarkupCountryInfo(countries) {
         population,
         flags,
         languages,
-      }) => /*html*/ `<h1 class="country-info__title"><img scr="${flags.svg}" alt="flag" width="75" />${name.official}</h1>
+      }) => /*html*/ `<h1 class="country-info__title"><img src="${flags.svg}" alt="flag" width="40"> ${name.official}</h1>
     <p><b>Capital</b>${capital}</p>
     <p><b>Population</b>${population}</p>
     <p><b>Languages</b>${languages}</p>`
