@@ -74,9 +74,9 @@ function createMarkupCountryInfo(countries) {
       }) => /*html*/ `<h1 class="country-info__title"><img src="${
         flags.svg
       }" alt="flag" width="40"> ${name.official}</h1>
-    <p><b>Capital</b>${capital}</p>
-    <p><b>Population</b>${population}</p>
-    <p><b>Languages</b>${Object.values(languages)}</p>`
+    <p><b>Capital</b> ${capital}</p>
+    <p><b>Population</b> ${population}</p>
+    <p><b>Languages</b> ${Object.values(languages)}</p>`
     )
     .join('');
   refs.countryInfo.insertAdjacentHTML('beforeend', markupInfo);
